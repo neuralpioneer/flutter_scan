@@ -24,6 +24,9 @@ rootProject.allprojects {
 apply plugin: 'com.android.library'
 
 android {
+    if (project.android.hasProperty("namespace")) {
+        namespace = "com.chavesgu.scan"
+    }
     compileSdkVersion 34
 
     defaultConfig {
@@ -77,9 +80,9 @@ dependencies {
 
 // android {
     
-//     if (project.android.hasProperty("namespace")) {
-//         namespace = "com.chavesgu.scan"
-//     }
+    // if (project.android.hasProperty("namespace")) {
+    //     namespace = "com.chavesgu.scan"
+    // }
 
 //     compileSdk = 34
 
